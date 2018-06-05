@@ -151,4 +151,30 @@ it was declared in.  _Let_ does _not_ behave like var.
 
 * HTML Rendering Engine
 
+## Types and Operators
+
+### Dynamic Typing
+
+Unlike many other languages, the Syntax Parser figures out a variable's type
+when it gets declared.  There are 6 primitive types.
+
+### 6 Primitive Types in Javascript
+
+* undefined
+
+* null
+
+* boolean
+
+* number (it's always a floating point; can make math weird)
+
+* string (no character type, just string type)
+
+* symbol (new type ES6)
+
+### Operators
+
+An operator is a function that is syntactically written differently. Instead 
+of calling a function by name, it uses a special character or pair of characters.
+
 
