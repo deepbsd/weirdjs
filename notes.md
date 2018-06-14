@@ -177,4 +177,33 @@ when it gets declared.  There are 6 primitive types.
 An operator is a function that is syntactically written differently. Instead 
 of calling a function by name, it uses a special character or pair of characters.
 
+* a + b = 'infix notation' 
+
+* +(a, b) = 'prefix notation'
+
+* (a, b)+ = 'postfix notation'
+
+This means the function name can sit between the two parameters.  This is basically
+a function call.
+
+### Operator Precedence and Associativity
+
+* right associativity: values to right of operator are operated on first
+
+* left associativity: values to left of operator are operated on first
+
+Some operators default to left associativity and some default to right associativity
+
+See the table about operator precendence and associativity
+
+### Type Coercion
+
+It must means you convert a value from one type to another type.  Or you attempt 
+to convert it.  There are rules for doing this.  If you don't understand those rules,
+Javascript will seem very weird.  The rules make sense up until you pass values of two
+different types to the operator, such as '+'.  If you pass `5 + '5'` you may not get
+the expected answer, unless you know the rules.
+
+Coercion happens quite a bit in JS because it's a dynamically typed language.
+
 
