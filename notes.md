@@ -214,14 +214,36 @@ var val2 = 'Your name here';
 
 var output = val1 || val2 ;
 
+# First log
 console.log(output);
+
+function greet(name){
+  name = name || '<Your name here.>';
+  console.log(name);
+}
+
+# Second log
+console.log(greet());
+console.log(greet('Tony'));
+
 ```
 
-The `||` operator returns a Boolean.  If the arguments passed to the operator
-are _not_ Boolean already, the operator tries to _coerce_ both values to true.
-If either value can be coerced to `true`, then that value is returned.
+The `||` operator returns a Boolean in the first log.  If the arguments passed
+to the operator are _not_ Boolean already, the operator tries to _coerce_ both
+values to true.  If either value can be coerced to `true`, then that value is
+returned.
 
 In this case, `undefined` gets coerced to `false`.  'Your name here' can be
 coerced to true, so `||` returns that value and output is set to 'Your name here'.
+
+In the second log, the `greet()` function sets the `name` variable to which ever
+is true first: the parameter name or the default value of '<Your name here>'.
+So the second log will print two values: `<Your name here.>` and then 'Tony'.  
+
+The thing to remember is that there are two operators, operators are functions,
+functions return something.  Since `||` returns a Boolean, JS tries to coerce
+its parameters to Boolean values.  If it can, the first parameter that can be
+coerced to true gets assigned by `=`, since `=` is an operator the the value
+returned by `||` gets assgined to the variable `name`.
 
 
