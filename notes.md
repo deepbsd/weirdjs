@@ -206,4 +206,22 @@ the expected answer, unless you know the rules.
 
 Coercion happens quite a bit in JS because it's a dynamically typed language.
 
+### Default Values
+
+```
+var val1 = undefined;
+var val2 = 'Your name here';
+
+var output = val1 || val2 ;
+
+console.log(output);
+```
+
+The `||` operator returns a Boolean.  If the arguments passed to the operator
+are _not_ Boolean already, the operator tries to _coerce_ both values to true.
+If either value can be coerced to `true`, then that value is returned.
+
+In this case, `undefined` gets coerced to `false`.  'Your name here' can be
+coerced to true, so `||` returns that value and output is set to 'Your name here'.
+
 
