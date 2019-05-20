@@ -5,6 +5,10 @@ These snippets cover some weirdness in JS covered in Udemy WeirdJS Course
 
 ## Notes from Udemy class about Weird Parts of JS
 
+This class is older and refers largely to ES5.  However the course has
+been updated to cover popular parts of ES6 in many sections.  The section
+on building your own library, though, still omits _let_ for example, and
+ES6 is largely omitted from this portion of the course.
 
 
 ## Concepts: Syntax Parsers, Execution Contexts, Lexical Environments
