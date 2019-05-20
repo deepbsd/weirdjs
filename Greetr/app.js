@@ -4,8 +4,9 @@ var g = G$('John', 'Doe');
 //g.greet().setLang('en').greet(true).log(true);
 
 let langChoice = $("#lang").val();
+let formalChoice = $("#formal").val();
 
-console.log("Lang: ", langChoice);
+console.log("Lang: ", langChoice, "Formality: ",formalChoice);
 
 // monitors changes to language selection.
 $("#lang").change(function(){
@@ -14,11 +15,29 @@ $("#lang").change(function(){
     g.setLang(langChoice);
 });
 
+
 $("#login").click(function(){
 
     //$("#logindiv").hide();  // I could hide the div, but then
     // I couldn't change lang on the fly...
-    g.HTMLGreeting("#greeting", true).log();
+
+    // I also added change formality functionality
+    
+    // Need to watchout for changes in formality
+    formalChoice = $("#formal").val();
+
+    // formalChoice will not be a Boolean at this time
+    // cannot call HTMLGreeting with string parameter, must be Boolean
+    if (formalChoice === 'true'){
+
+        g.HTMLGreeting("#greeting", true);
+
+    } else {
+
+        g.HTMLGreeting("#greeting", false).log();
+
+    }
+
 });
 
 

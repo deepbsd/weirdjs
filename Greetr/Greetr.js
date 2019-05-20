@@ -16,7 +16,7 @@
         en: 'Hello',
         es: 'Hola'
     };
-    
+
     // formal greetins
     let formalGreetings = {
         en: 'Greetings',
@@ -95,6 +95,7 @@
         },
 
         HTMLGreeting: function(selector, formal){
+
             // ensure we have jQuery object
             if (!$){
                 throw 'jQuery not loaded';
