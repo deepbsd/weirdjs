@@ -16,3 +16,8 @@ let myArr = [r, t, u];
 console.log("is 'r' inside an array of myArr? ", $.inArray(r, myArr));
 // What are the parents of the people list?
 console.log("Parents of the people list: ",q.parents());
+// what about the children?
+let p = $("ul.people");
+console.log("Children of the people UL: ",p.children());
+let o = [ q[0].innerText, q[1].innerText, q[2].innerText ];
+console.log("Here are the kids: ",o.join(", "));
