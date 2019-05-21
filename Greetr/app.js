@@ -30,7 +30,7 @@ $("#login").click(function(){
     // cannot call HTMLGreeting with string parameter, must be Boolean
     if (formalChoice === 'true'){
 
-        g.HTMLGreeting("#greeting", true);
+        g.HTMLGreeting("#greeting", true).log();
 
     } else {
 
